@@ -1,0 +1,41 @@
+#
+# GENERIC i386 kernel configuration
+#
+
+machine		i386
+cpu		I386_CPU
+ident		GENERIC
+
+maxusers	8
+
+# Core OS config
+options		INET		# Inter-networking
+options		FFS		# Berkeley Fast Filesystem
+options		UFS_DIRHASH	# UFS Directory Hashing
+options		SOFTUPDATES	# Enable soft updates for FFS
+options		SYSVSHM		# SYSV-like shared memory
+options-	SYSVMSG		# SYSV-like message queues
+options		SYSVSEM		# SYSV-like semaphores
+
+# Timekeeping
+options 	HZ=1000		# Ticks/second
+
+# Bus and device support
+device		isa
+device		pci
+
+# ISA Devices
+device		atkbdc		# AT Keyboard controller
+device		atkbd		# AT Keyboard
+device		psm		# PS/2 Mouse
+device		vga		# VGA console
+device		fdc		# Floppy disk controller
+device		wdc		# IDE/ATA disk controller
+
+# PCI Devices
+device		pciide		# PCI IDE controller
+device		ne_pci		# NE2000 PCI Ethernet
+
+# Pseudo-devices
+device		loop		# Loopback device
+device		pty		# Pseudo-terminals
