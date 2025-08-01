@@ -1,7 +1,7 @@
 #	@(#)Makefile	4.22 (Berkeley) 6/30/90
 
 SUBDIR=	bin contrib games include kerberosIV lib libexec old pgrm sbin \
-	share usr.bin usr.sbin
+	share usr.bin usr.sbin sys
 
 build:
 	${MAKE} cleandir
